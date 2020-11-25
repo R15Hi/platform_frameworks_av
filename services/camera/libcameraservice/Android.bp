@@ -165,6 +165,9 @@ cc_library_shared {
                 cppflags: ["-DQTI_CAMERA_DEVICE"],
                 shared_libs: ["vendor.qti.hardware.camera.device@1.0"],
             },
+            needs_camera_boottime_timestamp: {
+                cflags: ["-DTARGET_CAMERA_BOOTTIME_TIMESTAMP"],
+            },
         },
     },
 
