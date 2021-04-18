@@ -1,5 +1,6 @@
 cc_defaults {
     name: "libstagefright_bufferqueue-defaults",
+    defaults: ["stagefright_qcom_legacy_defaults"],
     double_loadable: true,
 
     srcs: [
@@ -46,14 +47,6 @@ cc_defaults {
         "-Wno-unused-parameter",
         "-Wno-documentation",
     ],
-
-    product_variables: {
-        octavi: {
-            uses_qcom_bsp_legacy: {
-                cppflags: ["-DQCOM_BSP_LEGACY"],
-            },
-        },
-    },
 
     sanitize: {
         misc_undefined: [

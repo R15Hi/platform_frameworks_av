@@ -1,5 +1,6 @@
 cc_library_shared {
     name: "libstagefright_omx",
+    defaults: ["stagefright_qcom_legacy_defaults"],
     vendor_available: true,
     vndk: {
         enabled: true,
@@ -63,14 +64,6 @@ cc_library_shared {
         "-Wno-unused-parameter",
         "-Wno-documentation",
     ],
-
-    product_variables: {
-        octavi: {
-            uses_qcom_bsp_legacy: {
-                cppflags: ["-DQCOM_BSP_LEGACY"],
-            },
-        },
-    },
 
     sanitize: {
         misc_undefined: [
